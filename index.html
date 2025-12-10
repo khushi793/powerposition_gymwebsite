@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container nav-wrapper">
             <a href="#" class="logo">
-                <i class="fas fa-bolt" style="color: var(--primary);"></i>
+                <i class="fas fa-bolt"></i>
                 NEXUS
             </a>
             <ul class="nav-links">
@@ -32,8 +34,12 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <span class="hero-tag">Evolve Your Potential</span>
-            <h1>Forging <br> <span>Elite Bodies</span></h1>
-            <p>Experience the next generation of fitness. State-of-the-art equipment, world-class trainers, and an atmosphere that pushes you to break every limit.</p>
+            <div class="glitch-wrapper">
+                <div class="glitch" data-text="FORGING ELITE">FORGING ELITE</div>
+                <div class="glitch" data-text="BODIES">BODIES</div>
+            </div>
+            <p>Experience the next generation of fitness. State-of-the-art equipment, world-class trainers, and an
+                atmosphere that pushes you to break every limit.</p>
             <div class="hero-btns">
                 <a href="#join" class="btn-primary">Start Your Journey</a>
                 <a href="#video" class="btn-secondary"><i class="fas fa-play"></i> Watch Video</a>
@@ -44,12 +50,12 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header animate-on-scroll">
                 <h2>Why Choose <span>NEXUS</span></h2>
                 <p>We're not just a gym. We're a high-performance lifestyle hub designed for results.</p>
             </div>
-            
-            <div class="features-grid">
+
+            <div class="features-grid stagger-grid">
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
                     <h3>Premium Equipment</h3>
@@ -72,31 +78,32 @@
     <!-- Programs/Classes -->
     <section class="classes" id="programs">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header animate-on-scroll">
                 <h2>Our <span>Programs</span></h2>
                 <p>Diverse training modules tailored to sculpt, strengthen, and endure.</p>
             </div>
 
-            <div class="classes-grid">
-                <div class="class-card">
-                    <img src="assets/personal_training.png" alt="Personal Training" class="class-img">
-                    <div class="class-overlay">
+            <div class="programs-accordion animate-on-scroll">
+                <div class="program-panel active" style="background-image: url('assets/personal_training.png');">
+                    <div class="panel-content">
                         <h3>Personal Training</h3>
-                        <p class="class-info">1-on-1 coaching customized to your unique goals and physique.</p>
+                        <p>Bespoke coaching tailored to your physiology and goals. Achieve peak performance with 1-on-1
+                            mentorship.</p>
+                        <a href="#" class="panel-btn">Start Now</a>
                     </div>
                 </div>
-                <div class="class-card">
-                    <img src="assets/group_class.png" alt="Group Classes" class="class-img">
-                    <div class="class-overlay">
+                <div class="program-panel" style="background-image: url('assets/group_class.png');">
+                    <div class="panel-content">
                         <h3>HIIT Classes</h3>
-                        <p class="class-info">High-energy group intervals to burn fat and boost metabolism.</p>
+                        <p>High-octane group sessions designed to ignite your metabolism and build explosive power.</p>
+                        <a href="#" class="panel-btn">View Schedule</a>
                     </div>
                 </div>
-                <div class="class-card">
-                    <img src="assets/cardio.png" alt="Cardio Zone" class="class-img">
-                    <div class="class-overlay">
+                <div class="program-panel" style="background-image: url('assets/cardio.png');">
+                    <div class="panel-content">
                         <h3>Cardio Zone</h3>
-                        <p class="class-info">Endurance training with immersive technology and tracking.</p>
+                        <p>Immersive endurance training with advanced metrics and virtual landscapes.</p>
+                        <a href="#" class="panel-btn">Explore Area</a>
                     </div>
                 </div>
             </div>
@@ -106,49 +113,54 @@
     <!-- Pricing -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header animate-on-scroll">
                 <h2>Membership <span>Plans</span></h2>
                 <p>Flexible options for every commitment level.</p>
             </div>
 
-            <div class="pricing-grid">
+            <div class="pricing-grid stagger-grid">
                 <!-- Basic Plan -->
                 <div class="pricing-card">
                     <h3>Standard</h3>
                     <div class="price">$49<span>/mo</span></div>
+                    <span class="price-desc">For casual enthusiasts</span>
                     <ul class="pricing-features">
-                        <li class="active"><i class="fas fa-check check"></i> Gym Access</li>
-                        <li class="active"><i class="fas fa-check check"></i> Locker Room</li>
-                        <li><i class="fas fa-times"></i> Group Classes</li>
-                        <li><i class="fas fa-times"></i> Personal Trainer</li>
+                        <li><i class="fas fa-check check"></i> Gym Access</li>
+                        <li><i class="fas fa-check check"></i> Locker Room</li>
+                        <li class="inactive"><i class="fas fa-check check" style="opacity: 0;"></i> Group Classes</li>
+                        <li class="inactive"><i class="fas fa-check check" style="opacity: 0;"></i> Personal Trainer
+                        </li>
                     </ul>
-                    <a href="#" class="btn-secondary">Choose Plan</a>
+                    <a href="#" class="pricing-btn">Choose Plan</a>
                 </div>
 
                 <!-- Pro Plan -->
                 <div class="pricing-card featured">
+                    <span class="popular-badge">Most Popular</span>
                     <h3>Pro Athlete</h3>
                     <div class="price">$89<span>/mo</span></div>
+                    <span class="price-desc">For dedicated builders</span>
                     <ul class="pricing-features">
-                        <li class="active"><i class="fas fa-check check"></i> 24/7 Gym Access</li>
-                        <li class="active"><i class="fas fa-check check"></i> All Group Classes</li>
-                        <li class="active"><i class="fas fa-check check"></i> Sauna & Spa</li>
-                        <li class="active"><i class="fas fa-check check"></i> 1 Free PT Session</li>
+                        <li><i class="fas fa-check check"></i> 24/7 Gym Access</li>
+                        <li><i class="fas fa-check check"></i> All Group Classes</li>
+                        <li><i class="fas fa-check check"></i> Sauna & Spa</li>
+                        <li><i class="fas fa-check check"></i> 1 Free PT Session</li>
                     </ul>
-                    <a href="#" class="btn-primary">Choose Plan</a>
+                    <a href="#" class="pricing-btn featured-btn">Choose Plan</a>
                 </div>
 
                 <!-- Elite Plan -->
                 <div class="pricing-card">
                     <h3>Elite</h3>
                     <div class="price">$149<span>/mo</span></div>
+                    <span class="price-desc">For ultimate performance</span>
                     <ul class="pricing-features">
-                        <li class="active"><i class="fas fa-check check"></i> All Access VIP</li>
-                        <li class="active"><i class="fas fa-check check"></i> Unlimited PT</li>
-                        <li class="active"><i class="fas fa-check check"></i> Nutrition Plan</li>
-                        <li class="active"><i class="fas fa-check check"></i> Private Locker</li>
+                        <li><i class="fas fa-check check"></i> All Access VIP</li>
+                        <li><i class="fas fa-check check"></i> Unlimited PT</li>
+                        <li><i class="fas fa-check check"></i> Nutrition Plan</li>
+                        <li><i class="fas fa-check check"></i> Private Locker</li>
                     </ul>
-                    <a href="#" class="btn-secondary">Choose Plan</a>
+                    <a href="#" class="pricing-btn">Choose Plan</a>
                 </div>
             </div>
         </div>
@@ -157,10 +169,11 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content animate-on-scroll">
                 <div class="footer-col">
                     <a href="#" class="footer-logo">NEXUS</a>
-                    <p class="footer-text">Forging elite bodies through science, sweat, and state-of-the-art facilities.</p>
+                    <p class="footer-text">Forging elite bodies through science, sweat, and state-of-the-art facilities.
+                    </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -190,8 +203,10 @@
                     <p class="footer-text">Subscribe for tips and offers.</p>
                     <!-- Simple form simulation -->
                     <div style="display: flex; gap: 10px;">
-                        <input type="email" placeholder="Email" style="padding: 10px; border-radius: 5px; border: none; background: #222; color: #fff; width: 100%;">
-                        <button class="btn-primary" style="padding: 10px 15px;"><i class="fas fa-arrow-right"></i></button>
+                        <input type="email" placeholder="Email"
+                            style="padding: 10px; border-radius: 5px; border: none; background: #222; color: #fff; width: 100%;">
+                        <button class="btn-primary" style="padding: 10px 15px;"><i
+                                class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -200,5 +215,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
